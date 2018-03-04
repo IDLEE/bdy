@@ -303,7 +303,8 @@ img {
 .i-question ul > li{
     position: relative;
     display: inline-block;
-    width: 50%;
+    width: 44%;
+    margin-right: 60px;
     padding-left: 38px;
     color: #333;
     margin-bottom: 40px;
