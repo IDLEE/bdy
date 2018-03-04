@@ -346,12 +346,26 @@ img {
 }
 .i-strengths.fcdy li{
     width: 390px;
+    vertical-align: top;
 }
 .i-strengths li + li{
     margin-left: 40px;
 }
 .i-strengths.fcdy li + li{
     margin-left: 15px;
+}
+.i-strengths.fcdy li table{
+    width: 100%;
+}
+.i-strengths.dzsl li th{
+    height: 40px;
+    font-weight: bold;
+}
+.i-strengths.dzsl li td{
+    height: 80px;
+}
+.i-strengths.dzsl li td + td,.i-strengths.dzsl li th + th{
+    border-left: solid 1px #cecece;
 }
 .i-strengths li h3{
     line-height: 80px;
@@ -365,6 +379,18 @@ img {
     color: #66666c;
     padding: 25px 0;
 }
+.i-strengths.dzsl li p{
+    padding: 0;
+    line-height: 80px;
+}
+.i-strengths.dzsl li p span{
+    display: block;
+    line-height: 160px;
+}
+.i-strengths.dzsl li th{
+    text-align: center;
+    border-bottom: solid 1px #cecece;
+}
 .i-strengths li.primary{
     background-color: #ffb202;
     border-color: #ffb202;
@@ -376,7 +402,7 @@ img {
 .i-strengths li.primary p{
     color: #fff;
 }
-.i-strengths th,.i-strengths td{
+.i-strengths_table th,.i-strengths_table td{
     border: solid 1px #e6e6eb;
     text-align: center;
     font-size: 16px;
@@ -390,11 +416,11 @@ img {
 .i-strengths_table table{
     width: 100%;
 }
-.i-strengths th{
+.i-strengths_table  th{
     background-color: #f5f5f9;
     height: 55px;
 }
-.i-strengths td{
+.i-strengths_table  td{
     height: 80px;
 }
 
