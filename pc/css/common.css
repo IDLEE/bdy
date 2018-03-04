@@ -220,11 +220,12 @@ img {
 }
 .banner .slogan {
     margin: 0 auto;
-    padding-top: 200px;
     width: 800px;
-    height: auto;
+    height: 100%;
     text-align: center;
     color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .banner .slogan h1 {
     font-size: 80px;
