@@ -84,7 +84,7 @@ function calculate() {
         return tool.msg('请输入正确格式的利率')
     }
     var resultData = countWinMoney(_amount*10000,_payment,_rate,_term*12);
-    totalAmount.text(formatNumber(resultData.total));
+    totalAmount.val(formatNumber(resultData.total));
     $('#form_detail_total').text(formatNumber(resultData.total));
     $('#form_detail_term').text(resultData.term);
     $('#form_detail_perAmount').text(formatNumber(resultData.perAmount));
@@ -95,7 +95,7 @@ function calculate() {
 
 function reset() {
     rate.val(publicRate);
-    totalAmount.text('');
+    totalAmount.val('');
     amount.val('');
     term.val('');
     level.val(1);
