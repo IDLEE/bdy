@@ -714,6 +714,7 @@ img {
     width: 180px;
 }
 .calculator_from .form_detail{
+    display: none;
     position: absolute;
     background-color: #ffb043;
     width: 355px;
