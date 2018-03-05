@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
     <title>垫资赎楼过桥</title>
     <link rel="stylesheet" href="css/common.css"/>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?17f50f8d00805f332b46a77ac51b6b53";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
 <!-- 头部 -->
@@ -324,9 +333,38 @@
                 <p>成本有多低  算算就知道</p>
             </div>
             <div class="calculator_from">
+                <div class="form_detail">
+                    <ul>
+                        <li class="clearfix">
+                            <p class="form_detail_hd fl">贷款总额：</p>
+                            <p class="form_detail_bd fr"><span id="form_detail_amount">--</span>元</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="form_detail_hd fl">还款月数：</p>
+                            <p class="form_detail_bd fr"><span id="form_detail_term">--</span>月</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="form_detail_hd fl">每月还款：</p>
+                            <p class="form_detail_bd fr"><span id="form_detail_perAmount">--</span>元</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="form_detail_hd fl">总支付利息：</p>
+                            <p class="form_detail_bd fr"><span id="form_detail_interest">--</span>元</p>
+                        </li>
+                        <li class="clearfix">
+                            <p class="form_detail_hd fl">本自合计：</p>
+                            <p class="form_detail_bd fr"><span id="form_detail_total">--</span>元</p>
+                        </li>
+                    </ul>
+                </div>
                 <div class="form_total form-group">
                     <input type="text" readonly id="totalAmount">
                     <span class="unit">元</span>
+                </div>
+                <div class="form-radio" id="payment">
+                    <span>还款方式:</span>
+                    <label><input type="radio" name="payment" checked value="3"><i></i>等额本息</label>
+                    <label><input type="radio" name="payment" value="1"><i></i>先息后本</label>
                 </div>
                 <div class="form-control">
                     <label>贷款金额：</label>
@@ -459,88 +497,6 @@
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/Validform_v5.3.2_min.js"></script>
-<script>
-    var publicRate = 4.9;
-    var rate = $('#rate'),
-        totalAmount = $('#totalAmount'),
-        term = $('#term'),
-        level = $('#level')
-        amount = $('#amount');
-    $(function(){
-        //$(".registerform").Validform();  //就这一行代码！;
-
-        var demo=$(".registerform").Validform({
-            tiptype:3,
-            label:".label",
-            showAllError:true,
-            datatype:{
-                "zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
-            },
-            ajaxPost:false
-        });
-
-        //通过$.Tipmsg扩展默认提示信息;
-        //$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
-        demo.tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
-
-        demo.addRule([{
-            ele:".inputxt:eq(0)",
-            datatype:"zh2-4"
-        },
-            {
-                ele:".inputxt:eq(1)",
-                datatype:"m"
-            }]);
-
-    })
-
-    function countWinMoney(money,payType,rate,bindTime) {
-        var resoultMoney;
-        var montyRate = rate/1200;
-        if(payType == 3) {
-            resoultMoney = (money*bindTime*montyRate*Math.pow((1+montyRate),bindTime)/(Math.pow((1+montyRate),bindTime)-1)).toFixed(2);
-        }else if(payType == 4) {
-            resoultMoney = (money*montyRate*(1+parseInt(bindTime))/2).toFixed(2);
-        }else {
-            resoultMoney = (money*rate*bindTime/1200).toFixed(2);
-        }
-        return resoultMoney;
-    }
-
-    function changeLevel(event) {
-        var target = $(event.target);
-        var level = target.val();
-        rate.val(Math.round(publicRate*100) * Math.round(level*100)/ 10000)
-    }
-
-    function calculate() {
-        var _amount = amount.val();
-        var _term = term.val();
-        var _rate = rate.val();
-        if(!_amount){
-            return tool.msg('请输入贷款金额')
-        }
-        if(!_term){
-            return tool.msg('请选择贷款期限')
-        }
-        if(!_rate){
-            return tool.msg('请输入年化利率')
-        }
-        if(isNaN(Number(_rate))){
-            return tool.msg('请输入正确格式的利率')
-        }
-        var total = countWinMoney(_amount*10000,3,_rate,_term*12);
-        totalAmount.val(total);
-    }
-
-    function reset() {
-        rate.val(publicRate);
-        totalAmount.val('');
-        amount.val('');
-        term.val('');
-        level.val(1);
-    }
-
-</script>
+<script src="js/public.js"></script>
 </body>
 </html>

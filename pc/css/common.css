@@ -621,8 +621,11 @@ img {
 .calculator_hd p{
     font-size: 16px;
 }
+.calculator_from{
+    position: relative;
+}
 .calculator_from > div{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .calculator_from .form-group{
     position: relative;
@@ -651,11 +654,11 @@ img {
     text-align: right;
     font-size: 30px;
 }
-.calculator_from .form-control{
+.calculator_from .form-control,.calculator_from .form-radio{
     position: relative;
     padding-left: 90px;
 }
-.calculator_from .form-control label{
+.calculator_from .form-control label,.calculator_from .form-radio span{
     display: inline-block;
     width: 90px;
     position: absolute;
@@ -664,6 +667,32 @@ img {
     line-height: 60px;
     color: #fff;
     font-size: 14px;
+}
+.calculator_from .form-radio{
+    line-height: 24px;
+    color: #fff;
+}
+.calculator_from .form-radio input{
+    display: none;
+}
+.calculator_from .form-radio label{
+    margin-right: 50px;
+}
+.calculator_from .form-radio label i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.calculator_from .form-radio input:checked + i{
+    border: solid 2px #fff;
+    background-color: #ffb043;
+}
+.calculator_from .form-radio span{
+    line-height: 24px;
 }
 .calculator_from .form-control select{
     appearance: none;
@@ -683,6 +712,36 @@ img {
 }
 .calculator_from .form-control.rate .form-group{
     width: 180px;
+}
+.calculator_from .form_detail{
+    position: absolute;
+    background-color: #ffb043;
+    width: 355px;
+    height: 200px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 20px 40px;
+    border-radius: 6px;
+    top: -230px;
+    left: 50%;
+    margin-left: -178px;
+}
+.calculator_from .form_detail:before{
+    content: ' ';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: solid 5px #ffb043;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    margin-left: -2px;
+}
+.calculator_from .form_detail li span{
+    font-weight: bold;
 }
 .calculator_from .buttons{
     font-size: 0;
