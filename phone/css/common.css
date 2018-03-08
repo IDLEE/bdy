@@ -561,9 +561,9 @@ img {
     bottom: 0;
     content: ' ';
     display: block;
-    width: .02rem;
+    width: 2px;
     background-color: #ffb043;
-    margin-left: -.01rem;
+    margin-left: -1px;
 }
 .i-cheat-q dt{
     font-weight: bold;

@@ -23,10 +23,12 @@
     <div class="header">
         <div class="head clearfix">
             <h1 class="fl">贝迪盈</h1>
-            <dl class="tel fr">
-                <dd>020-8352 2725</dd>
-                <dt>24小时咨询电话</dt>
-            </dl>
+            <a href="tel:02083522725">
+                <dl class="tel fr">
+                    <dd>020-8352 2725</dd>
+                    <dt>24小时咨询电话</dt>
+                </dl>
+            </a>
         </div>
         <div class="nav">
             <ul class="flex">
@@ -92,11 +94,11 @@
         <div class="i-definition-list">
             <ul>
                 <li>
-                    <h3>交易垫资贷款定义</h3>
+                    <h3>交易垫资定义</h3>
                     <p>业主欠银行或机构贷款，房产处理抵押状态，必须还清贷款解压后方可交易。我司帮客户垫资还贷赎契，让客户完成买卖交易。</p>
                 </li>
                 <li>
-                    <h3>过桥垫资贷款定义</h3>
+                    <h3>过桥垫资定义</h3>
                     <p>业主在贷款机构、私人借款、银行贷款到期，由我司帮客户出资，归还老贷款担保，再贷出新贷款担保，用以归还临时拆借的资金。</p>
                 </li>
                 <li>
@@ -195,11 +197,11 @@
         <h2><img src="images/operation/jy_title_4.svg" alt="案例数据证明实力"></h2>
         <div class="i-case-data">
             <dl>
-                <dd><b>59,650,800</b>元</dd>
+                <dd><b>1159,650,800</b>元</dd>
                 <dt>累计放款金额</dt>
             </dl>
             <dl>
-                <dd><b>2,580</b>人</dd>
+                <dd><b>6,580</b>人</dd>
                 <dt>成功贷款人数</dt>
             </dl>
         </div>
@@ -210,15 +212,15 @@
                         <img src="images/operation/avatar_man.png">
                         <h3>付先生</h3>
                         <span>赎楼垫资160万</span>
-                        <p>付先生房产一押欠中行160万，现想300万出售房子，需还清银行贷款。我司帮助付生获得贷款160万元，之后新买家一次性付房款。</p>
+                        <p>客户付先生一押欠中行160万元，现想已300万元出售给新买家，但需我司垫资160万元还清银行贷款才可进行交易过户，我司垫资160万元后，新买家一次性交付房款后再回款给我司，顺利完成所有操作。</p>
                     </div>
                 </li>
                 <li class="swiper-slide">
                     <div>
                         <img src="images/operation/avatar_man.png">
-                        <h3>李先生</h3>
+                        <h3>安小姐</h3>
                         <span>赎楼垫资110万</span>
-                        <p>客户李先生一押欠农行60万，二押欠私人机构50万，房贷、信贷及多张信用卡出现逾期，经我司风控人员核查事实，垫资110万给客户顺利协助客户完成负债清算。</p>
+                        <p>客户安小姐一押欠农行60万，二押欠私人机构50万，房贷、信贷及多张信用卡出现逾期，经我司风控人员核查事实，垫资110万给客户顺利协助客户完成负债清算。</p>
                     </div>
                 </li>
                 <li class="swiper-slide">
@@ -268,7 +270,7 @@
                 </dt>
                 <dd>
                     <h3>耽误用款</h3>
-                    <p>资深专业团队，可当天回复<br>“能否贷、贷多少、放款时间”，确保用款时间与额度</p>
+                    <p>资深专业团队，当天回复<br>“能否贷、贷多少、放款时间”，确保用款时间与额度</p>
                     <p>业务专业度不够，办理时间过长或贷款审核没通过，耽误用款时间</p>
                 </dd>
                 <dd>
@@ -353,7 +355,7 @@
             <div class="form-control">
                 <label>贷款金额</label>
                 <div class="form-group">
-                    <input type="tel" id="amount" maxlength="5" autocomplete="off" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                    <input type="tel" id="amount" maxlength="5" autocomplete="off" onKeyUp="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
                     <span class="unit">万元</span>
                 </div>
             </div>
@@ -387,7 +389,7 @@
             </div>
             <div class="flex">
                 <div class="form-control rate">
-                    <select id="level" onchange="changeLevel(event)">
+                    <select id="level" onChange="changeLevel(event)">
                         <option value="1。3">新基准上限（1.3倍）</option>
                         <option value="1.2">新基准利率上限（1.2倍）</option>
                         <option value="1.1">新基准利率上限（1.1倍）</option>
@@ -403,8 +405,8 @@
             </div>
 
             <div class="buttons">
-                <button class="btn-primary calculate" onclick="calculate()">计算</button>
-                <button class="btn-default reset" onclick="reset()">重置</button>
+                <button class="btn-primary calculate" onClick="calculate()">计算</button>
+                <button class="btn-default reset" onClick="reset()">重置</button>
             </div>
         </div>
     </div>
